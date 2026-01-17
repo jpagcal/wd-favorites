@@ -1,5 +1,4 @@
 # wd-favorites
-<<<<<<< HEAD
 save your favourite working directories and navigate to them with ease
 =======
 
@@ -26,4 +25,3 @@ $ wd-favorites --help
     $ wd-favorites --name=Jane
     Hello, Jane
 ```
->>>>>>> 2807e2e (initial scaffold)
