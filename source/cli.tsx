@@ -3,6 +3,7 @@ import React from 'react';
 import {render} from 'ink';
 import meow from 'meow';
 import App from './app.js';
+import clear from 'clear';
 
 const cli = meow(
 	`
@@ -25,5 +26,7 @@ const cli = meow(
 		},
 	},
 );
+
+clear();
 
 render(<App name={cli.flags.name} />);
