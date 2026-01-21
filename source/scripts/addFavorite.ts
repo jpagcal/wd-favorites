@@ -10,11 +10,8 @@ export const readAndAppend = 'as+';
 export default function addFavorite(path: string) {
 	try {
 		const fileDescriptor: number = fs.openSync(favoritesPath, readAndAppend);
-		console.log(fileDescriptor);
 		fs.writeSync(fileDescriptor, `${path}\n`, null, 'utf-8');
 	} catch (error: any) {
 		console.error(error);
 	}
 }
-
-addFavorite('~/my_projects');

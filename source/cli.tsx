@@ -1,32 +1,26 @@
 #!/usr/bin/env node
-import React from 'react';
-import {render} from 'ink';
-import meow from 'meow';
-import App from './app.js';
 import clear from 'clear';
+import addFavorite from './scripts/addFavorite.js';
 
-const cli = meow(
-	`
-	Usage
-	  $ wd-favorites
+const flag: string | undefined = process.argv[2];
 
-	Options
-		--name  Your name
+switch (flag) {
+	case 'cwd':
+		addFavorite(process.cwd());
+		clear();
+		break;
+	case 'add':
+		let pathToBeAdded: string;
 
-	Examples
-	  $ wd-favorites --name=Jane
-	  Hello, Jane
-`,
-	{
-		importMeta: import.meta,
-		flags: {
-			name: {
-				type: 'string',
-			},
-		},
-	},
-);
+		if (typeof process.argv[3] === 'string') {
+			pathToBeAdded = process.argv[3];
+			addFavorite(pathToBeAdded);
+			clear();
+		}
+		break;
+	default:
+		//render a chooser
+		break;
+}
 
 clear();
-
-render(<App name={cli.flags.name} />);
