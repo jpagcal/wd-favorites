@@ -1,11 +1,5 @@
 import fs from 'fs';
-import path from 'path';
-
-export const favoritesPath = path.join(
-	import.meta.dirname,
-	'../../favorites.txt',
-);
-export const readAndAppend = 'as+';
+import {favoritesPath, readAndAppend} from 'source/constants/constants.js';
 
 export default function addFavorite(path: string) {
 	try {
