@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import clear from 'clear';
+import {render} from 'ink';
 import addFavorite from './scripts/addFavorite.js';
+import App from './app.js';
 
 const flag: string | undefined = process.argv[2];
 
@@ -19,8 +21,7 @@ switch (flag) {
 		}
 		break;
 	default:
-		//render a chooser
+		clear();
+		render(<App />);
 		break;
 }
-
-clear();
