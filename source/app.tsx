@@ -13,7 +13,11 @@ export default function App() {
 	};
 
 	const cycleUp = () => {
-		setIndex((index - 1) % favoritesState.data.length);
+		setIndex(
+			(((index - 1) % favoritesState.data.length) +
+				favoritesState.data.length) %
+				favoritesState.data.length,
+		); // real mod function
 	};
 
 	useInput((_input, key) => {
