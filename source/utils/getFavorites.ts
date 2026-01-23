@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import {favoritesPath} from 'source/constants/constants.js';
+import {favoritesPath} from '../constants/constants.js';
 
 const getFavorites = async (): Promise<string[]> => {
 	let favorites: string[] = [];

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import {favoritesPath, readAndAppend} from 'source/constants/constants.js';
+import {favoritesPath, readAndAppend} from '../constants/constants.js';
 
 export default function addFavorite(path: string) {
 	try {

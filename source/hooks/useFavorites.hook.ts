@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import getFavorites from 'source/utils/getFavorites.js';
+import getFavorites from '../utils/getFavorites.js';
 import Hook from './hook.interface.js';
 
 const useFavorites = (): Hook => {
