@@ -1,14 +1,21 @@
 import {Box} from 'ink';
+import React from 'react';
 
-const StyledBox = () => {
+interface StyledBoxProps {
+	children: React.ReactNode;
+}
+
+const StyledBox = ({children}: StyledBoxProps) => {
 	return (
 		<Box
 			flexDirection="column"
 			padding={2}
-			borderStyle="bold"
+			borderStyle="round"
 			borderDimColor
 			gap={2}
-		></Box>
+		>
+			{children}
+		</Box>
 	);
 };
 
