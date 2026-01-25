@@ -25,6 +25,7 @@ export default function App() {
 			cycleDown();
 		} else if (key.upArrow) {
 			cycleUp();
+		} else if (key.return) {
 		}
 	});
 
@@ -48,6 +49,18 @@ export default function App() {
 
 	return (
 		<StyledBox>
+			<Text>
+				Use{' '}
+				<Text bold color="whiteBright">
+					↑ ↓
+				</Text>{' '}
+				to cycle, press{' '}
+				<Text bold color="whiteBright">
+					Enter
+				</Text>{' '}
+				to navigate to the selected working directory.
+			</Text>
+
 			<Box flexDirection="column" gap={0}>
 				{(favoritesState.data as Array<string>).map((favorite, itemIndex) => (
 					<Text
