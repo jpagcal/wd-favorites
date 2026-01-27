@@ -5,3 +5,4 @@ export const favoritesPath = path.join(
 	'../../favorites.txt',
 );
 export const readAndAppend = 'as+';
+export const showCursor = '\x1b[?25h';

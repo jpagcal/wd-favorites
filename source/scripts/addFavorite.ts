@@ -19,5 +19,3 @@ export default async function addFavorite(path: string) {
 		}
 	}
 }
-
-addFavorite('~/my_projects');

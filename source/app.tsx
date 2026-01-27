@@ -3,6 +3,7 @@ import useFavorites from './hooks/useFavorites.hook.js';
 import Hook from './hooks/hook.interface.js';
 import StyledBox from './components/StyledBox.js';
 import {useState} from 'react';
+import writeToTemp from './utils/writeToTemp.js';
 
 export default function App() {
 	const favoritesState: Hook = useFavorites();
@@ -26,6 +27,8 @@ export default function App() {
 		} else if (key.upArrow) {
 			cycleUp();
 		} else if (key.return) {
+			writeToTemp(favoritesState.data[index]);
+			process.exit();
 		}
 	});
 
